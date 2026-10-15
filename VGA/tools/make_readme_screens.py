@@ -16,7 +16,7 @@ ROOT = os.path.join(os.path.dirname(HERE), 'Original game files')
 OUT = os.path.join(HERE, 'docs', 'images')
 os.makedirs(OUT, exist_ok=True)
 STEPS = [(2_000_000, 'snap', 'title'), (4_000_000, 'key', None), (7_000_000, 'snap', 'gameplay')]
-VGA_STEPS = [(2_000_000, 'snap', 'title'), (4_000_000, 'key', None), (10_000_000, 'snap', 'gameplay')]   # the VGA build starts play later
+VGA_STEPS = [(2_450_000, 'snap', 'title'), (4_000_000, 'key', None), (10_000_000, 'snap', 'gameplay')]   # the VGA build draws the logo later and starts play later
 
 
 def run(name, g, grab, steps=STEPS):

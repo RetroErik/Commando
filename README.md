@@ -61,6 +61,21 @@ Frames from the real game code, each running headless in the project's 8086 emul
 | **Plantronics ColorPlus** – 16 colours | ![Plantronics title](VGA/docs/images/title_plantronics.png) | ![Plantronics gameplay](VGA/docs/images/gameplay_plantronics.png) |
 | **VGA mode 13h** – 256 colours (this project) | ![VGA title](VGA/docs/images/title_vga.png) | ![VGA gameplay](VGA/docs/images/gameplay_vga.png) |
 
+### Ten seconds of gameplay
+
+The same ten seconds of the game's self-playing demo in each version. The animated previews below are silent GIFs; **click the link under each one for the MP4 with sound**.
+
+| Version | Preview (silent) | Video with sound |
+|---|---|---|
+| **Original CGA** – 4 colours, PC speaker | ![Original CGA](VGA/docs/video/commando_cga_pc_speaker.gif) | [commando_cga_pc_speaker.mp4](VGA/docs/video/commando_cga_pc_speaker.mp4) |
+| **Plantronics ColorPlus** – 16 colours, PC speaker | ![Plantronics](VGA/docs/video/commando_plantronics.gif) | [commando_plantronics.mp4](VGA/docs/video/commando_plantronics.mp4) |
+| **VGA** – 256 colours, **CMS** (Game Blaster) music | ![VGA with CMS](VGA/docs/video/commando_vga_cms.gif) | [commando_vga_cms.mp4](VGA/docs/video/commando_vga_cms.mp4) |
+| **VGA** – 256 colours, **AdLib** music | ![VGA with AdLib](VGA/docs/video/commando_vga_adlib.gif) | [commando_vga_adlib.mp4](VGA/docs/video/commando_vga_adlib.mp4) |
+
+How they were made: the CGA and both VGA clips are real DOSBox 0.74-3 recordings (picture and sound together, 4000 cycles/ms, which gives about 20 game frames per second), with the sound device chosen through the M key.
+DOSBox cannot show ColorPlus colours, so the **Plantronics picture is rendered by the project's 8086 emulator** from the real Plantronics build (one frame per screen update, played at the same 20 frames/s), while its **sound is recorded from the same Plantronics build in DOSBox**; picture and sound
+of that clip are therefore not frame-synchronised. The CMS and AdLib clips look identical; they differ in sound only. The title screen is left out on purpose.
+
 ## Features (so far)
 
 - Complete description of the CGA graphics system, sprite format, fonts, tiles, title bitmaps, scenery layers and the level data stored in `COMMANDO.DAT` – see [VGA/docs/ANALYSIS.md](VGA/docs/ANALYSIS.md).
@@ -215,6 +230,7 @@ Original-graphics atlases (in `VGA/atlas/`): `orig_*_cga.png`, `scenery_cga.png`
 | `VGA/` | this project; the paths below are relative to this folder |
 | `VGA/docs/ANALYSIS.md` | graphics-system analysis and VGA design |
 | `VGA/docs/images/` | README screenshots (original CGA, Plantronics, VGA), made by `tools\make_readme_screens.py` |
+| `VGA/docs/video/` | 10-second clips (MP4 with sound, silent GIF previews) made by `tools\make_readme_videos.ps1` |
 | `VGA/releases/` | v1.0, v1.1 and v1.2 release folders |
 | `VGA/src/` | the VGA layer (`vga.s`), AdLib/dispatcher (`snd.s`) and CMS player (`cms.s`) |
 | `VGA/tools/` | emulator, tracers, extractors, art generator, DOSBox helpers |

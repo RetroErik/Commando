@@ -20,6 +20,7 @@ Add-Type -AssemblyName System.Windows.Forms
 Add-Type -TypeDefinition @'
 using System; using System.Runtime.InteropServices;
 public static class Win { [DllImport("user32.dll")] public static extern bool SetForegroundWindow(IntPtr h);
+[DllImport("user32.dll")] public static extern IntPtr GetForegroundWindow();
   [DllImport("user32.dll")] public static extern bool ShowWindow(IntPtr h, int c);
   [DllImport("user32.dll")] public static extern void keybd_event(byte vk, byte sc, uint flags, UIntPtr extra);
   [DllImport("user32.dll")] public static extern uint MapVirtualKey(uint code, uint type);
@@ -68,12 +69,15 @@ try {
         if ($wait -gt 0) { Start-Sleep -Milliseconds ([int]($wait * 1000)) }
         $p.Refresh()
         if ($p.HasExited) { Write-Warning 'DOSBox exited early'; break }
+        $prev = [Win]::GetForegroundWindow()     # DOSBox only holds the focus while the keys are sent, so stray typing elsewhere cannot reach the game
         [Win]::SetForegroundWindow($p.MainWindowHandle) | Out-Null
         Start-Sleep -Milliseconds 150
         if ($s.Hold) { [Win]::Hold([byte]$s.Hold, [int]$(if ($s.Ms) { $s.Ms } else { 250 }), [bool]$s.Ext); Start-Sleep -Milliseconds 300 }
         if ($s.Keys) { [System.Windows.Forms.SendKeys]::SendWait($s.Keys); Start-Sleep -Milliseconds 300 }
         if ($s.Rec) { [System.Windows.Forms.SendKeys]::SendWait('^%{F6}'); Start-Sleep -Milliseconds 500 }
+        if ($s.Vid) { [System.Windows.Forms.SendKeys]::SendWait('^%{F5}'); Start-Sleep -Milliseconds 500 }   # toggle DOSBox video (AVI + audio) capture
         if ($s.Shot) { [System.Windows.Forms.SendKeys]::SendWait('^{F5}'); Start-Sleep -Milliseconds 700 }
+        if ($prev -ne [IntPtr]::Zero -and $prev -ne $p.MainWindowHandle) { [Win]::SetForegroundWindow($prev) | Out-Null }
     }
     $rest = $Total - ((Get-Date) - $t0).TotalSeconds
     if ($rest -gt 0) { Start-Sleep -Milliseconds ([int]($rest * 1000)) }
