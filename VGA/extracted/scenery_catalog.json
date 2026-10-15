@@ -1,0 +1,101 @@
+{
+ "L1_AFDE": {
+  "level": 1,
+  "ds_offset": 45022,
+  "width_bytes": 11,
+  "rows": 56,
+  "or_blit": true,
+  "attr_ptr": 45638,
+  "attr_width_bytes": 6,
+  "record": "00000546b2383e00deaf01010b00",
+  "uses": 168
+ },
+ "L1_AFC4": {
+  "level": 1,
+  "ds_offset": 44996,
+  "width_bytes": 3,
+  "rows": 5,
+  "or_blit": false,
+  "attr_ptr": 45012,
+  "attr_width_bytes": 2,
+  "record": "000010d4af056600c4af01000300",
+  "uses": 12
+ },
+ "L1_B396": {
+  "level": 1,
+  "ds_offset": 45974,
+  "width_bytes": 11,
+  "rows": 56,
+  "or_blit": true,
+  "attr_ptr": 46590,
+  "attr_width_bytes": 6,
+  "record": "000016feb538040096b301010b00",
+  "uses": 154
+ },
+ "L1_AD38": {
+  "level": 1,
+  "ds_offset": 44344,
+  "width_bytes": 10,
+  "rows": 28,
+  "or_blit": false,
+  "attr_ptr": 44624,
+  "attr_width_bytes": 5,
+  "record": "00002e50ae1c220038ad01000a00",
+  "uses": 84
+ },
+ "L3_AA1A": {
+  "level": 3,
+  "ds_offset": 43546,
+  "width_bytes": 7,
+  "rows": 52,
+  "or_blit": false,
+  "attr_ptr": 43910,
+  "attr_width_bytes": 4,
+  "record": "00000086ab3410001aaa14000700",
+  "uses": 130
+ },
+ "L3_AB94": {
+  "level": 3,
+  "ds_offset": 43924,
+  "width_bytes": 10,
+  "rows": 28,
+  "or_blit": false,
+  "attr_ptr": 44204,
+  "attr_width_bytes": 5,
+  "record": "000000acac1c000094ab01000a00",
+  "uses": 14
+ },
+ "L3_AC56": {
+  "level": 3,
+  "ds_offset": 44118,
+  "width_bytes": 14,
+  "rows": 52,
+  "or_blit": false,
+  "attr_ptr": 44846,
+  "attr_width_bytes": 7,
+  "record": "0000152eaf34100056ac14000e00",
+  "uses": 130
+ },
+ "L3_9952": {
+  "level": 3,
+  "ds_offset": 39250,
+  "width_bytes": 9,
+  "rows": 27,
+  "or_blit": false,
+  "attr_ptr": 39494,
+  "attr_width_bytes": 5,
+  "record": "000022469a1b2400529901000900",
+  "uses": 13
+ },
+ "L3_AEDC": {
+  "level": 3,
+  "ds_offset": 44764,
+  "width_bytes": 7,
+  "rows": 21,
+  "or_blit": false,
+  "attr_ptr": 44912,
+  "attr_width_bytes": 4,
+  "record": "00002370af152a00dcae01000700",
+  "uses": 1
+ }
+}

@@ -1,0 +1,5 @@
+C:\Users\hages\OneDrive\VS Code\DOS Programs\Commando\VGA\tools\test_sprite_independence.py:59: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  print('screens identical:', list(f0.getdata()) == list(f1.getdata()), '(expected False: sprites are drawn differently)')
+level 1 instructions: original 10009041, scrambled 10009041
+DS:9250-FFFF differing bytes after 6000000 instructions of gameplay: 0
+screens identical: False (expected False: sprites are drawn differently)

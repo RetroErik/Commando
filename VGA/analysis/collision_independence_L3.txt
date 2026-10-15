@@ -1,0 +1,3 @@
+level 3 instructions: original 8009001, scrambled 8009001
+DS:9250-FFFF differing bytes after 4000000 instructions of gameplay: 0
+screens identical: False (expected False: sprites are drawn differently)

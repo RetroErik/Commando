@@ -1,0 +1,38 @@
+60C0  47                 inc    di
+60C1  b8 17 00           mov    ax,0x17
+60C4  50                 push   ax
+60C5  2b c0              sub    ax,ax
+60C7  50                 push   ax
+60C8  e8 25 22           call   0x82f0
+60CB  83 c4 06           add    sp,0x6
+60CE  e8 f0 05           call   0x66c1
+60D1  0a c0              or     al,al
+60D3  74 09              je     0x60de
+60D5  b8 03 00           mov    ax,0x3
+60D8  50                 push   ax
+60D9  b8 b0 91           mov    ax,0x91b0
+60DC  eb 07              jmp    0x60e5
+60DE  b8 03 00           mov    ax,0x3
+60E1  50                 push   ax
+60E2  b8 ac 91           mov    ax,0x91ac
+60E5  50                 push   ax
+60E6  2b c0              sub    ax,ax
+60E8  50                 push   ax
+60E9  e8 34 22           call   0x8320
+60EC  83 c4 06           add    sp,0x6
+60EF  57                 push   di
+60F0  47                 inc    di
+60F1  b8 17 00           mov    ax,0x17
+60F4  50                 push   ax
+60F5  2b c0              sub    ax,ax
+60F7  50                 push   ax
+60F8  e8 f5 21           call   0x82f0
+60FB  83 c4 06           add    sp,0x6
+60FE  e8 ce 05           call   0x66cf
+6101  0a c0              or     al,al
+6103  74 09              je     0x610e
+6105  b8 03 00           mov    ax,0x3
+6108  50                 push   ax
+6109  b8 b0 91           mov    ax,0x91b0
+610C  eb 07              jmp    0x6115
+610E  b8 03 00           mov    ax,0x3

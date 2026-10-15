@@ -1,0 +1,2 @@
+level 3 logic reads by byte offset inside sprite record (8 = 8 or more): {'outside': 104, 1: 214, 0: 214, 8: 164, 2: 705, 3: 750}
+logic IPs that read beyond header bytes: {17607: {8: 164, 3: 50}}

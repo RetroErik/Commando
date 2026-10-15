@@ -1,0 +1,63 @@
+01CD  55                 push   bp
+01CE  8b ec              mov    bp,sp
+01D0  83 ec 02           sub    sp,0x2
+01D3  c6 46 fe 00        mov    BYTE PTR [bp-0x2],0x0
+01D7  80 3e 50 92 00     cmp    BYTE PTR ds:0x9250,0x0
+01DC  75 23              jne    0x201
+01DE  80 3e 9f fb 4d     cmp    BYTE PTR ds:0xfb9f,0x4d
+01E3  73 1c              jae    0x201
+01E5  b8 01 00           mov    ax,0x1
+01E8  50                 push   ax
+01E9  50                 push   ax
+01EA  e8 ef 55           call   0x57dc
+01ED  83 c4 04           add    sp,0x4
+01F0  0a c0              or     al,al
+01F2  74 1a              je     0x20e
+01F4  c6 06 50 92 01     mov    BYTE PTR ds:0x9250,0x1
+01F9  c7 06 56 fb 18 00  mov    WORD PTR ds:0xfb56,0x18
+01FF  eb 0d              jmp    0x20e
+0201  b8 01 00           mov    ax,0x1
+0204  50                 push   ax
+0205  2b c0              sub    ax,ax
+0207  50                 push   ax
+0208  e8 d1 55           call   0x57dc
+020B  83 c4 04           add    sp,0x4
+020E  80 3e a5 fb 09     cmp    BYTE PTR ds:0xfba5,0x9
+0213  75 06              jne    0x21b
+0215  c6 46 fe 01        mov    BYTE PTR [bp-0x2],0x1
+0219  eb 54              jmp    0x26f
+021B  80 3e 50 92 00     cmp    BYTE PTR ds:0x9250,0x0
+0220  74 4d              je     0x26f
+0222  83 3e 56 fb 00     cmp    WORD PTR ds:0xfb56,0x0
+0227  75 46              jne    0x26f
+0229  80 3e 4e fe 00     cmp    BYTE PTR ds:0xfe4e,0x0
+022E  75 3f              jne    0x26f
+0230  80 3e a5 fb 00     cmp    BYTE PTR ds:0xfba5,0x0
+0235  74 07              je     0x23e
+0237  80 3e a5 fb 01     cmp    BYTE PTR ds:0xfba5,0x1
+023C  75 31              jne    0x26f
+023E  c6 06 a5 fb 06     mov    BYTE PTR ds:0xfba5,0x6
+0243  c6 06 95 fb 05     mov    BYTE PTR ds:0xfb95,0x5
+0248  c6 06 96 fb 00     mov    BYTE PTR ds:0xfb96,0x0
+024D  c6 06 8f fb 00     mov    BYTE PTR ds:0xfb8f,0x0
+0252  c7 06 91 fb 40 00  mov    WORD PTR ds:0xfb91,0x40
+0258  c7 06 93 fb 00 01  mov    WORD PTR ds:0xfb93,0x100
+025E  c6 06 9e fb 00     mov    BYTE PTR ds:0xfb9e,0x0
+0263  c7 06 a0 fb 40 00  mov    WORD PTR ds:0xfba0,0x40
+0269  c7 06 a2 fb 80 01  mov    WORD PTR ds:0xfba2,0x180
+026F  e8 48 04           call   0x6ba
+0272  e8 0f 00           call   0x284
+0275  e8 2a 3b           call   0x3da2
+0278  e8 95 13           call   0x1610
+027B  8a 46 fe           mov    al,BYTE PTR [bp-0x2]
+027E  2a e4              sub    ah,ah
+0280  8b e5              mov    sp,bp
+0282  5d                 pop    bp
+0283  c3                 ret
+0284  55                 push   bp
+0285  8b ec              mov    bp,sp
+0287  83 ec 06           sub    sp,0x6
+028A  57                 push   di
+028B  56                 push   si
+028C  2b f6              sub    si,si
+028E  c7 46 fa 8e fb     mov    WORD PTR [bp-0x6],0xfb8e

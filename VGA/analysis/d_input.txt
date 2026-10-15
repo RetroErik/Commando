@@ -1,0 +1,117 @@
+6FFA  55                 push   bp
+6FFB  8b ec              mov    bp,sp
+6FFD  83 ec 02           sub    sp,0x2
+7000  56                 push   si
+7001  2b f6              sub    si,si
+7003  39 76 06           cmp    WORD PTR [bp+0x6],si
+7006  74 50              je     0x7058
+7008  8b 5e 08           mov    bx,WORD PTR [bp+0x8]
+700B  a0 10 f9           mov    al,ds:0xf910
+700E  38 47 02           cmp    BYTE PTR [bx+0x2],al
+7011  77 05              ja     0x7018
+7013  be 04 00           mov    si,0x4
+7016  eb 0f              jmp    0x7027
+7018  8b 5e 08           mov    bx,WORD PTR [bp+0x8]
+701B  a0 13 f9           mov    al,ds:0xf913
+701E  38 47 02           cmp    BYTE PTR [bx+0x2],al
+7021  72 04              jb     0x7027
+7023  81 ce 08 00        or     si,0x8
+7027  8b 5e 08           mov    bx,WORD PTR [bp+0x8]
+702A  a0 11 f9           mov    al,ds:0xf911
+702D  38 47 03           cmp    BYTE PTR [bx+0x3],al
+7030  77 06              ja     0x7038
+7032  81 ce 01 00        or     si,0x1
+7036  eb 0f              jmp    0x7047
+7038  8b 5e 08           mov    bx,WORD PTR [bp+0x8]
+703B  a0 13 f9           mov    al,ds:0xf913
+703E  38 47 03           cmp    BYTE PTR [bx+0x3],al
+7041  72 04              jb     0x7047
+7043  81 ce 02 00        or     si,0x2
+7047  8b 5e 08           mov    bx,WORD PTR [bp+0x8]
+704A  8a 47 04           mov    al,BYTE PTR [bx+0x4]
+704D  2a e4              sub    ah,ah
+704F  25 0c 00           and    ax,0xc
+7052  d1 e0              shl    ax,1
+7054  d1 e0              shl    ax,1
+7056  eb 4d              jmp    0x70a5
+7058  8b 5e 08           mov    bx,WORD PTR [bp+0x8]
+705B  a0 0c f9           mov    al,ds:0xf90c
+705E  38 07              cmp    BYTE PTR [bx],al
+7060  77 06              ja     0x7068
+7062  81 ce 04 00        or     si,0x4
+7066  eb 0e              jmp    0x7076
+7068  8b 5e 08           mov    bx,WORD PTR [bp+0x8]
+706B  a0 0f f9           mov    al,ds:0xf90f
+706E  38 07              cmp    BYTE PTR [bx],al
+7070  72 04              jb     0x7076
+7072  81 ce 08 00        or     si,0x8
+7076  8b 5e 08           mov    bx,WORD PTR [bp+0x8]
+7079  a0 0d f9           mov    al,ds:0xf90d
+707C  38 47 01           cmp    BYTE PTR [bx+0x1],al
+707F  77 06              ja     0x7087
+7081  81 ce 01 00        or     si,0x1
+7085  eb 0f              jmp    0x7096
+7087  8b 5e 08           mov    bx,WORD PTR [bp+0x8]
+708A  a0 0f f9           mov    al,ds:0xf90f
+708D  38 47 01           cmp    BYTE PTR [bx+0x1],al
+7090  72 04              jb     0x7096
+7092  81 ce 02 00        or     si,0x2
+7096  8b 5e 08           mov    bx,WORD PTR [bp+0x8]
+7099  8a 47 04           mov    al,BYTE PTR [bx+0x4]
+709C  2a e4              sub    ah,ah
+709E  25 03 00           and    ax,0x3
+70A1  b1 04              mov    cl,0x4
+70A3  d3 e0              shl    ax,cl
+70A5  0b f0              or     si,ax
+70A7  56                 push   si
+70A8  8b de              mov    bx,si
+70AA  81 e3 0f 00        and    bx,0xf
+70AE  d1 e3              shl    bx,1
+70B0  ff b7 f2 91        push   WORD PTR [bx-0x6e0e]
+70B4  ff 76 04           push   WORD PTR [bp+0x4]
+70B7  e8 dd 02           call   0x7397
+70BA  83 c4 06           add    sp,0x6
+70BD  5e                 pop    si
+70BE  8b e5              mov    sp,bp
+70C0  5d                 pop    bp
+70C1  c3                 ret
+70C2  55                 push   bp
+70C3  8b ec              mov    bp,sp
+70C5  83 ec 02           sub    sp,0x2
+70C8  57                 push   di
+70C9  56                 push   si
+70CA  8b 46 06           mov    ax,WORD PTR [bp+0x6]
+70CD  0b c0              or     ax,ax
+70CF  74 0c              je     0x70dd
+70D1  3d 03 00           cmp    ax,0x3
+70D4  74 2e              je     0x7104
+70D6  3d 04 00           cmp    ax,0x4
+70D9  74 34              je     0x710f
+70DB  eb 3a              jmp    0x7117
+70DD  2b f6              sub    si,si
+70DF  39 36 0a f9        cmp    WORD PTR ds:0xf90a,si
+70E3  7e 32              jle    0x7117
+70E5  8b fe              mov    di,si
+70E7  d1 e7              shl    di,1
+70E9  81 bd 14 f9 e7 03  cmp    WORD PTR [di-0x6ec],0x3e7
+70EF  74 10              je     0x7101
+70F1  ff b5 14 f9        push   WORD PTR [di-0x6ec]
+70F5  e8 85 02           call   0x737d
+70F8  83 c4 02           add    sp,0x2
+70FB  c7 85 14 f9 e7 03  mov    WORD PTR [di-0x6ec],0x3e7
+7101  46                 inc    si
+7102  eb db              jmp    0x70df
+7104  ff 76 04           push   WORD PTR [bp+0x4]
+7107  e8 13 00           call   0x711d
+710A  83 c4 02           add    sp,0x2
+710D  eb 08              jmp    0x7117
+710F  ff 76 04           push   WORD PTR [bp+0x4]
+7112  e8 2b 01           call   0x7240
+7115  eb f3              jmp    0x710a
+7117  5e                 pop    si
+7118  5f                 pop    di
+7119  8b e5              mov    sp,bp
+711B  5d                 pop    bp
+711C  c3                 ret
+711D  55                 push   bp
+711E  8b ec              mov    bp,sp

@@ -1,0 +1,120 @@
+73D5  55                 push   bp
+73D6  8b ec              mov    bp,sp
+73D8  83 ec 02           sub    sp,0x2
+73DB  57                 push   di
+73DC  56                 push   si
+73DD  b8 17 04           mov    ax,0x417
+73E0  50                 push   ax
+73E1  2b c0              sub    ax,ax
+73E3  50                 push   ax
+73E4  e8 f6 f0           call   0x64dd
+73E7  83 c4 04           add    sp,0x4
+73EA  0c 70              or     al,0x70
+73EC  50                 push   ax
+73ED  b8 17 04           mov    ax,0x417
+73F0  50                 push   ax
+73F1  2b c0              sub    ax,ax
+73F3  50                 push   ax
+73F4  e8 f9 f0           call   0x64f0
+73F7  83 c4 06           add    sp,0x6
+73FA  c7 06 0a f9 00 00  mov    WORD PTR ds:0xf90a,0x0
+7400  eb 2a              jmp    0x742c
+7402  e8 63 01           call   0x7568
+7405  8b 1e 0a f9        mov    bx,WORD PTR ds:0xf90a
+7409  d1 e3              shl    bx,1
+740B  89 87 14 f9        mov    WORD PTR [bx-0x6ec],ax
+740F  8b 3e 0a f9        mov    di,WORD PTR ds:0xf90a
+7413  d1 e7              shl    di,1
+7415  81 c7 14 f9        add    di,0xf914
+7419  83 3d 00           cmp    WORD PTR [di],0x0
+741C  75 0a              jne    0x7428
+741E  e8 47 01           call   0x7568
+7421  2d 3a 00           sub    ax,0x3a
+7424  f7 d8              neg    ax
+7426  89 05              mov    WORD PTR [di],ax
+7428  ff 06 0a f9        inc    WORD PTR ds:0xf90a
+742C  e8 22 01           call   0x7551
+742F  0b c0              or     ax,ax
+7431  75 cf              jne    0x7402
+7433  80 3e ee 91 01     cmp    BYTE PTR ds:0x91ee,0x1
+7438  74 15              je     0x744f
+743A  80 3e ee 91 02     cmp    BYTE PTR ds:0x91ee,0x2
+743F  74 0e              je     0x744f
+7441  80 3e ef 91 01     cmp    BYTE PTR ds:0x91ef,0x1
+7446  74 07              je     0x744f
+7448  80 3e ef 91 02     cmp    BYTE PTR ds:0x91ef,0x2
+744D  75 4a              jne    0x7499
+744F  e8 3e 0d           call   0x8190
+7452  8b f0              mov    si,ax
+7454  80 3e ee 91 01     cmp    BYTE PTR ds:0x91ee,0x1
+7459  75 06              jne    0x7461
+745B  56                 push   si
+745C  2b c0              sub    ax,ax
+745E  50                 push   ax
+745F  eb 0e              jmp    0x746f
+7461  80 3e ee 91 02     cmp    BYTE PTR ds:0x91ee,0x2
+7466  75 0e              jne    0x7476
+7468  56                 push   si
+7469  b8 01 00           mov    ax,0x1
+746C  50                 push   ax
+746D  2b c0              sub    ax,ax
+746F  50                 push   ax
+7470  e8 87 fb           call   0x6ffa
+7473  83 c4 06           add    sp,0x6
+7476  80 3e ef 91 01     cmp    BYTE PTR ds:0x91ef,0x1
+747B  75 09              jne    0x7486
+747D  56                 push   si
+747E  2b c0              sub    ax,ax
+7480  50                 push   ax
+7481  b8 01 00           mov    ax,0x1
+7484  eb 0c              jmp    0x7492
+7486  80 3e ef 91 02     cmp    BYTE PTR ds:0x91ef,0x2
+748B  75 0c              jne    0x7499
+748D  56                 push   si
+748E  b8 01 00           mov    ax,0x1
+7491  50                 push   ax
+7492  50                 push   ax
+7493  e8 64 fb           call   0x6ffa
+7496  83 c4 06           add    sp,0x6
+7499  80 3e ee 91 01     cmp    BYTE PTR ds:0x91ee,0x1
+749E  74 1d              je     0x74bd
+74A0  80 3e ee 91 02     cmp    BYTE PTR ds:0x91ee,0x2
+74A5  74 16              je     0x74bd
+74A7  80 3e ee 91 00     cmp    BYTE PTR ds:0x91ee,0x0
+74AC  74 0f              je     0x74bd
+74AE  a0 ee 91           mov    al,ds:0x91ee
+74B1  2a e4              sub    ah,ah
+74B3  50                 push   ax
+74B4  2b c0              sub    ax,ax
+74B6  50                 push   ax
+74B7  e8 08 fc           call   0x70c2
+74BA  83 c4 04           add    sp,0x4
+74BD  80 3e ef 91 01     cmp    BYTE PTR ds:0x91ef,0x1
+74C2  74 1e              je     0x74e2
+74C4  80 3e ef 91 02     cmp    BYTE PTR ds:0x91ef,0x2
+74C9  74 17              je     0x74e2
+74CB  80 3e ef 91 00     cmp    BYTE PTR ds:0x91ef,0x0
+74D0  74 10              je     0x74e2
+74D2  a0 ee 91           mov    al,ds:0x91ee
+74D5  2a e4              sub    ah,ah
+74D7  50                 push   ax
+74D8  b8 01 00           mov    ax,0x1
+74DB  50                 push   ax
+74DC  e8 e3 fb           call   0x70c2
+74DF  83 c4 04           add    sp,0x4
+74E2  2b c0              sub    ax,ax
+74E4  50                 push   ax
+74E5  50                 push   ax
+74E6  e8 d9 fb           call   0x70c2
+74E9  83 c4 04           add    sp,0x4
+74EC  5e                 pop    si
+74ED  5f                 pop    di
+74EE  8b e5              mov    sp,bp
+74F0  5d                 pop    bp
+74F1  c3                 ret
+74F2  55                 push   bp
+74F3  8b ec              mov    bp,sp
+74F5  83 ec 04           sub    sp,0x4
+74F8  e8 95 0c           call   0x8190
+74FB  89 46 fe           mov    WORD PTR [bp-0x2],ax
+74FE  83 7e 04 00        cmp    WORD PTR [bp+0x4],0x0

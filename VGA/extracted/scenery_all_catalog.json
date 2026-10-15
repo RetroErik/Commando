@@ -1,0 +1,490 @@
+[
+ {
+  "level": 1,
+  "ptr": 37980,
+  "width": 7,
+  "rows": 33,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 1,
+  "ptr": 38350,
+  "width": 16,
+  "rows": 32,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 1,
+  "ptr": 39250,
+  "width": 9,
+  "rows": 27,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 1,
+  "ptr": 39630,
+  "width": 9,
+  "rows": 27,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 1,
+  "ptr": 40010,
+  "width": 10,
+  "rows": 31,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 1,
+  "ptr": 40476,
+  "width": 10,
+  "rows": 28,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 1,
+  "ptr": 40896,
+  "width": 16,
+  "rows": 31,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 1,
+  "ptr": 41640,
+  "width": 17,
+  "rows": 34,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 1,
+  "ptr": 42524,
+  "width": 17,
+  "rows": 28,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 1,
+  "ptr": 43252,
+  "width": 16,
+  "rows": 28,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 1,
+  "ptr": 43924,
+  "width": 10,
+  "rows": 28,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 1,
+  "ptr": 44344,
+  "width": 10,
+  "rows": 28,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 1,
+  "ptr": 44764,
+  "width": 7,
+  "rows": 21,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 1,
+  "ptr": 44996,
+  "width": 3,
+  "rows": 5,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 1,
+  "ptr": 45022,
+  "width": 11,
+  "rows": 56,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 1,
+  "ptr": 45974,
+  "width": 11,
+  "rows": 56,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 37980,
+  "width": 2,
+  "rows": 33,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 38080,
+  "width": 2,
+  "rows": 33,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 38180,
+  "width": 7,
+  "rows": 33,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 38550,
+  "width": 16,
+  "rows": 32,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 39318,
+  "width": 10,
+  "rows": 34,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 39828,
+  "width": 8,
+  "rows": 19,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 40056,
+  "width": 8,
+  "rows": 40,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 40536,
+  "width": 7,
+  "rows": 16,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 40712,
+  "width": 8,
+  "rows": 19,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 40940,
+  "width": 8,
+  "rows": 40,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 41420,
+  "width": 7,
+  "rows": 16,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 41596,
+  "width": 10,
+  "rows": 31,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 42062,
+  "width": 10,
+  "rows": 28,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 42482,
+  "width": 16,
+  "rows": 31,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 43226,
+  "width": 17,
+  "rows": 34,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 44110,
+  "width": 17,
+  "rows": 28,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 44838,
+  "width": 16,
+  "rows": 28,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 45510,
+  "width": 11,
+  "rows": 44,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 46258,
+  "width": 11,
+  "rows": 43,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 46990,
+  "width": 7,
+  "rows": 16,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 47166,
+  "width": 7,
+  "rows": 16,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 47342,
+  "width": 7,
+  "rows": 16,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 47518,
+  "width": 7,
+  "rows": 52,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 2,
+  "ptr": 48090,
+  "width": 14,
+  "rows": 52,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 37980,
+  "width": 7,
+  "rows": 44,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 38288,
+  "width": 7,
+  "rows": 44,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 38596,
+  "width": 7,
+  "rows": 44,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 38904,
+  "width": 7,
+  "rows": 44,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 39212,
+  "width": 9,
+  "rows": 27,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 39592,
+  "width": 9,
+  "rows": 27,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 39972,
+  "width": 14,
+  "rows": 43,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 40876,
+  "width": 7,
+  "rows": 35,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 41122,
+  "width": 7,
+  "rows": 35,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 41368,
+  "width": 7,
+  "rows": 43,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 41842,
+  "width": 7,
+  "rows": 43,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 42316,
+  "width": 7,
+  "rows": 35,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 42562,
+  "width": 7,
+  "rows": 35,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 42808,
+  "width": 14,
+  "rows": 35,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 43300,
+  "width": 7,
+  "rows": 35,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 43546,
+  "width": 7,
+  "rows": 52,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 44118,
+  "width": 14,
+  "rows": 52,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 45210,
+  "width": 6,
+  "rows": 56,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 45714,
+  "width": 8,
+  "rows": 60,
+  "orflag": 0,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 46434,
+  "width": 11,
+  "rows": 56,
+  "orflag": 1,
+  "raw": null
+ },
+ {
+  "level": 3,
+  "ptr": 47386,
+  "width": 11,
+  "rows": 56,
+  "orflag": 1,
+  "raw": null
+ }
+]

@@ -1,0 +1,5 @@
+PASS: detection, notes, rests, percussion, 128 rows, loop, registers, chaining, timer restore.
+PASS: game recognition, mismatched code rejection, mute, frozen position, resume, preview isolation.
+PASS: guarded speaker music suppression, active effects preserved, speaker exit cleanup.
+PASS: effects pitch conversion, retrigger, sweep, S mute, independent music mute, guarded live hook.
+PASS: live music capture, original pitch, repeated notes, rests, note gaps, sequence end, M mute, no replacement song.

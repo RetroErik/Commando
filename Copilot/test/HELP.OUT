@@ -1,0 +1,6 @@
+CMUSIC       Original game music and gunfire through AdLib.
+CMUSIC /N    Start without AdLib hooks (comparison).
+CMUSIC /P    Preview Night Patrol; any key stops.
+CMUSIC /E    Preview AdLib gunfire; any key stops.
+CMUSIC /?    Show help.
+Run from the Commando directory. Press Q to leave the game.

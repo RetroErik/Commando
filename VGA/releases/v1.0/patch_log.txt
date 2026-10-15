@@ -1,0 +1,32 @@
+jmp  7590 -> hook_ramfill
+jmp  77AA -> hook_clearscreen
+jmp  8139 -> hook_present
+jmp  8172 -> hook_retrace
+jmp  77C1 -> hook_addr
+jmp  7C3F -> hook_sprite
+jmp  7899 -> hook_restore
+jmp  6D4E -> hook_glyph
+jmp  18A3 -> hook_title
+jmp  6A2B -> hook_dissolve
+jmp  76D1 -> hook_groundblit
+jmp  7743 -> hook_colorkey
+call 6A1D 8310 -> hook_setmode
+call 5134 5F5D -> hook_orblit
+call 5157 5F5D -> hook_orblit
+call 5173 6498 -> hook_copyblit
+call 5196 6498 -> hook_copyblit
+call 5585 64C1 -> hook_fillrow
+call 55A6 64C1 -> hook_fillrow
+call 571D 64C1 -> hook_clearground
+call 533D 64C1 -> hook_clearground
+imm  3313 b80004 -> b80010
+imm  6C27 b800b8 -> b800a0
+imm  6C4E b800b8 -> b800a0
+imm  75D7 b800b8 -> b800a0
+imm  75F2 b800b8 -> b800a0
+imm  77AE b800b8 -> b800a0
+imm  6C70 414141 -> 83c10c
+imm  6CCC 414141 -> 83c10c
+
+K=13080 paragraphs, DS=3B4E, code=3556 bytes, assets=164224 bytes
+{'sprites': 90, 'glyphs': 44, 'tiles': 10, 'title': 5, 'scenery': 61, 'asset_bytes': 164224}

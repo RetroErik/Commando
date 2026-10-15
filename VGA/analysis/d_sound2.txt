@@ -1,0 +1,347 @@
+66B8  50                 push   ax
+66B9  e4 61              in     al,0x61
+66BB  24 fc              and    al,0xfc
+66BD  e6 61              out    0x61,al
+66BF  58                 pop    ax
+66C0  c3                 ret
+66C1  33 c0              xor    ax,ax
+66C3  2e a0 83 65        mov    al,cs:0x6583
+66C7  0b c0              or     ax,ax
+66C9  74 03              je     0x66ce
+66CB  b8 01 00           mov    ax,0x1
+66CE  c3                 ret
+66CF  33 c0              xor    ax,ax
+66D1  2e a0 90 65        mov    al,cs:0x6590
+66D5  0b c0              or     ax,ax
+66D7  74 03              je     0x66dc
+66D9  b8 01 00           mov    ax,0x1
+66DC  c3                 ret
+66DD  55                 push   bp
+66DE  8b ec              mov    bp,sp
+66E0  50                 push   ax
+66E1  53                 push   bx
+66E2  8b 5e 04           mov    bx,WORD PTR [bp+0x4]
+66E5  8b 46 08           mov    ax,WORD PTR [bp+0x8]
+66E8  83 fb ff           cmp    bx,0xffff
+66EB  75 0b              jne    0x66f8
+66ED  bb 00 00           mov    bx,0x0
+66F0  50                 push   ax
+66F1  e4 61              in     al,0x61
+66F3  24 fc              and    al,0xfc
+66F5  e6 61              out    0x61,al
+66F7  58                 pop    ax
+66F8  2e 83 3e 81 65 00  cmp    WORD PTR cs:0x6581,0x0
+66FE  74 07              je     0x6707
+6700  2e 39 06 86 65     cmp    WORD PTR cs:0x6586,ax
+6705  73 23              jae    0x672a
+6707  fa                 cli
+6708  2e a3 86 65        mov    cs:0x6586,ax
+670C  2e 89 1e 81 65     mov    WORD PTR cs:0x6581,bx
+6711  2e 89 1e 88 65     mov    WORD PTR cs:0x6588,bx
+6716  8b 46 06           mov    ax,WORD PTR [bp+0x6]
+6719  2e a2 8a 65        mov    cs:0x658a,al
+671D  2e c6 06 85 65 01  mov    BYTE PTR cs:0x6585,0x1
+6723  2e c6 06 8b 65 01  mov    BYTE PTR cs:0x658b,0x1
+6729  fb                 sti
+672A  5b                 pop    bx
+672B  58                 pop    ax
+672C  5d                 pop    bp
+672D  c3                 ret
+672E  55                 push   bp
+672F  8b ec              mov    bp,sp
+6731  50                 push   ax
+6732  53                 push   bx
+6733  2e 80 3e 90 65 00  cmp    BYTE PTR cs:0x6590,0x0
+6739  74 45              je     0x6780
+673B  8b 5e 04           mov    bx,WORD PTR [bp+0x4]
+673E  8b 46 06           mov    ax,WORD PTR [bp+0x6]
+6741  83 fb ff           cmp    bx,0xffff
+6744  75 0b              jne    0x6751
+6746  bb 00 00           mov    bx,0x0
+6749  50                 push   ax
+674A  e4 61              in     al,0x61
+674C  24 fc              and    al,0xfc
+674E  e6 61              out    0x61,al
+6750  58                 pop    ax
+6751  2e 83 3e 8c 65 00  cmp    WORD PTR cs:0x658c,0x0
+6757  74 07              je     0x6760
+6759  2e 39 06 91 65     cmp    WORD PTR cs:0x6591,ax
+675E  73 20              jae    0x6780
+6760  fa                 cli
+6761  2e a3 91 65        mov    cs:0x6591,ax
+6765  2e 89 1e 8c 65     mov    WORD PTR cs:0x658c,bx
+676A  2e 89 1e 93 65     mov    WORD PTR cs:0x6593,bx
+676F  32 c0              xor    al,al
+6771  2e a2 95 65        mov    cs:0x6595,al
+6775  2e a2 96 65        mov    cs:0x6596,al
+6779  fe c0              inc    al
+677B  2e a2 97 65        mov    cs:0x6597,al
+677F  fb                 sti
+6780  5b                 pop    bx
+6781  58                 pop    ax
+6782  5d                 pop    bp
+6783  c3                 ret
+6784  55                 push   bp
+6785  8b ec              mov    bp,sp
+6787  50                 push   ax
+6788  fa                 cli
+6789  8b 46 04           mov    ax,WORD PTR [bp+0x4]
+678C  2e a2 83 65        mov    cs:0x6583,al
+6790  0b c0              or     ax,ax
+6792  75 10              jne    0x67a4
+6794  2e 83 3e 8c 65 00  cmp    WORD PTR cs:0x658c,0x0
+679A  75 08              jne    0x67a4
+679C  50                 push   ax
+679D  e4 61              in     al,0x61
+679F  24 fc              and    al,0xfc
+67A1  e6 61              out    0x61,al
+67A3  58                 pop    ax
+67A4  fb                 sti
+67A5  58                 pop    ax
+67A6  5d                 pop    bp
+67A7  c3                 ret
+67A8  55                 push   bp
+67A9  8b ec              mov    bp,sp
+67AB  50                 push   ax
+67AC  fa                 cli
+67AD  8b 46 04           mov    ax,WORD PTR [bp+0x4]
+67B0  2e a2 90 65        mov    cs:0x6590,al
+67B4  0b c0              or     ax,ax
+67B6  75 0f              jne    0x67c7
+67B8  50                 push   ax
+67B9  e4 61              in     al,0x61
+67BB  24 fc              and    al,0xfc
+67BD  e6 61              out    0x61,al
+67BF  58                 pop    ax
+67C0  2e c7 06 8c 65 00 00 mov    WORD PTR cs:0x658c,0x0
+67C7  fb                 sti
+67C8  58                 pop    ax
+67C9  5d                 pop    bp
+67CA  c3                 ret
+67CB  50                 push   ax
+67CC  53                 push   bx
+67CD  51                 push   cx
+67CE  56                 push   si
+67CF  33 c9              xor    cx,cx
+67D1  2e 39 0e 81 65     cmp    WORD PTR cs:0x6581,cx
+67D6  74 29              je     0x6801
+67D8  2e fe 0e 8b 65     dec    BYTE PTR cs:0x658b
+67DD  75 22              jne    0x6801
+67DF  2e fe 0e 85 65     dec    BYTE PTR cs:0x6585
+67E4  74 23              je     0x6809
+67E6  2e 39 0e 8c 65     cmp    WORD PTR cs:0x658c,cx
+67EB  75 08              jne    0x67f5
+67ED  50                 push   ax
+67EE  e4 61              in     al,0x61
+67F0  24 fc              and    al,0xfc
+67F2  e6 61              out    0x61,al
+67F4  58                 pop    ax
+67F5  2e a0 84 65        mov    al,cs:0x6584
+67F9  2e a2 8b 65        mov    cs:0x658b,al
+67FD  0a c0              or     al,al
+67FF  74 08              je     0x6809
+6801  5e                 pop    si
+6802  59                 pop    cx
+6803  5b                 pop    bx
+6804  58                 pop    ax
+6805  c3                 ret
+6806  e9 98 00           jmp    0x68a1
+6809  2e 8b 36 88 65     mov    si,WORD PTR cs:0x6588
+680E  8b 1c              mov    bx,WORD PTR [si]
+6810  0b db              or     bx,bx
+6812  74 f2              je     0x6806
+6814  46                 inc    si
+6815  46                 inc    si
+6816  2e 89 36 88 65     mov    WORD PTR cs:0x6588,si
+681B  80 ff ff           cmp    bh,0xff
+681E  75 1a              jne    0x683a
+6820  57                 push   di
+6821  33 c0              xor    ax,ax
+6823  8a c3              mov    al,bl
+6825  d1 e0              shl    ax,1
+6827  8b f8              mov    di,ax
+6829  8b 1c              mov    bx,WORD PTR [si]
+682B  2e 89 9d 9a 65     mov    WORD PTR cs:[di+0x659a],bx
+6830  46                 inc    si
+6831  46                 inc    si
+6832  2e 89 36 88 65     mov    WORD PTR cs:0x6588,si
+6837  5f                 pop    di
+6838  eb cf              jmp    0x6809
+683A  33 c0              xor    ax,ax
+683C  8a c3              mov    al,bl
+683E  24 1f              and    al,0x1f
+6840  d1 e0              shl    ax,1
+6842  8b f0              mov    si,ax
+6844  2e 8b 84 9a 65     mov    ax,WORD PTR cs:[si+0x659a]
+6849  2e a2 8b 65        mov    cs:0x658b,al
+684D  2e 88 26 84 65     mov    BYTE PTR cs:0x6584,ah
+6852  33 c0              xor    ax,ax
+6854  8a c7              mov    al,bh
+6856  d1 e0              shl    ax,1
+6858  8b f0              mov    si,ax
+685A  2e 8b 84 da 65     mov    ax,WORD PTR cs:[si+0x65da]
+685F  0b c0              or     ax,ax
+6861  75 11              jne    0x6874
+6863  2e 39 0e 8c 65     cmp    WORD PTR cs:0x658c,cx
+6868  75 2e              jne    0x6898
+686A  50                 push   ax
+686B  e4 61              in     al,0x61
+686D  24 fc              and    al,0xfc
+686F  e6 61              out    0x61,al
+6871  58                 pop    ax
+6872  eb 24              jmp    0x6898
+6874  2e 38 0e 83 65     cmp    BYTE PTR cs:0x6583,cl
+6879  74 1d              je     0x6898
+687B  2e 39 0e 8c 65     cmp    WORD PTR cs:0x658c,cx
+6880  75 16              jne    0x6898
+6882  50                 push   ax
+6883  50                 push   ax
+6884  b0 b6              mov    al,0xb6
+6886  e6 43              out    0x43,al
+6888  58                 pop    ax
+6889  e6 42              out    0x42,al
+688B  8a c4              mov    al,ah
+688D  e6 42              out    0x42,al
+688F  58                 pop    ax
+6890  50                 push   ax
+6891  e4 61              in     al,0x61
+6893  0c 03              or     al,0x3
+6895  e6 61              out    0x61,al
+6897  58                 pop    ax
+6898  b0 02              mov    al,0x2
+689A  2e a2 85 65        mov    cs:0x6585,al
+689E  e9 60 ff           jmp    0x6801
+68A1  2e 8b 36 81 65     mov    si,WORD PTR cs:0x6581
+68A6  2e 38 0e 8a 65     cmp    BYTE PTR cs:0x658a,cl
+68AB  75 07              jne    0x68b4
+68AD  33 f6              xor    si,si
+68AF  2e 89 36 81 65     mov    WORD PTR cs:0x6581,si
+68B4  2e 89 36 88 65     mov    WORD PTR cs:0x6588,si
+68B9  2e 39 0e 8c 65     cmp    WORD PTR cs:0x658c,cx
+68BE  75 08              jne    0x68c8
+68C0  50                 push   ax
+68C1  e4 61              in     al,0x61
+68C3  24 fc              and    al,0xfc
+68C5  e6 61              out    0x61,al
+68C7  58                 pop    ax
+68C8  2e c6 06 8b 65 01  mov    BYTE PTR cs:0x658b,0x1
+68CE  2e c6 06 85 65 01  mov    BYTE PTR cs:0x6585,0x1
+68D4  e9 2a ff           jmp    0x6801
+68D7  50                 push   ax
+68D8  56                 push   si
+68D9  2e 80 3e 90 65 00  cmp    BYTE PTR cs:0x6590,0x0
+68DF  74 24              je     0x6905
+68E1  2e 83 3e 8c 65 00  cmp    WORD PTR cs:0x658c,0x0
+68E7  74 1c              je     0x6905
+68E9  2e fe 0e 97 65     dec    BYTE PTR cs:0x6597
+68EE  75 15              jne    0x6905
+68F0  2e c7 06 98 65 00 00 mov    WORD PTR cs:0x6598,0x0
+68F7  2e c6 06 97 65 01  mov    BYTE PTR cs:0x6597,0x1
+68FD  2e 8b 36 93 65     mov    si,WORD PTR cs:0x6593
+6902  e8 03 00           call   0x6908
+6905  5e                 pop    si
+6906  58                 pop    ax
+6907  c3                 ret
+6908  8a 04              mov    al,BYTE PTR [si]
+690A  46                 inc    si
+690B  3c 01              cmp    al,0x1
+690D  74 36              je     0x6945
+690F  3c 02              cmp    al,0x2
+6911  74 3c              je     0x694f
+6913  3c 03              cmp    al,0x3
+6915  74 4f              je     0x6966
+6917  3c 04              cmp    al,0x4
+6919  74 55              je     0x6970
+691B  2e fe 0e 95 65     dec    BYTE PTR cs:0x6595
+6920  74 0c              je     0x692e
+6922  2e 8b 36 8c 65     mov    si,WORD PTR cs:0x658c
+6927  2e 89 36 93 65     mov    WORD PTR cs:0x6593,si
+692C  eb 16              jmp    0x6944
+692E  2e c7 06 8c 65 00 00 mov    WORD PTR cs:0x658c,0x0
+6935  2e c7 06 91 65 00 00 mov    WORD PTR cs:0x6591,0x0
+693C  50                 push   ax
+693D  e4 61              in     al,0x61
+693F  24 fc              and    al,0xfc
+6941  e6 61              out    0x61,al
+6943  58                 pop    ax
+6944  c3                 ret
+6945  8b 04              mov    ax,WORD PTR [si]
+6947  46                 inc    si
+6948  46                 inc    si
+6949  2e a3 8e 65        mov    cs:0x658e,ax
+694D  eb b9              jmp    0x6908
+694F  8a 04              mov    al,BYTE PTR [si]
+6951  46                 inc    si
+6952  2e 80 3e 96 65 00  cmp    BYTE PTR cs:0x6596,0x0
+6958  75 ae              jne    0x6908
+695A  2e a2 95 65        mov    cs:0x6595,al
+695E  2e c6 06 96 65 ff  mov    BYTE PTR cs:0x6596,0xff
+6964  eb a2              jmp    0x6908
+6966  8b 04              mov    ax,WORD PTR [si]
+6968  46                 inc    si
+6969  46                 inc    si
+696A  2e a3 98 65        mov    cs:0x6598,ax
+696E  eb 98              jmp    0x6908
+6970  8a 04              mov    al,BYTE PTR [si]
+6972  46                 inc    si
+6973  2e a2 97 65        mov    cs:0x6597,al
+6977  2e a1 8e 65        mov    ax,cs:0x658e
+697B  50                 push   ax
+697C  50                 push   ax
+697D  b0 b6              mov    al,0xb6
+697F  e6 43              out    0x43,al
+6981  58                 pop    ax
+6982  e6 42              out    0x42,al
+6984  8a c4              mov    al,ah
+6986  e6 42              out    0x42,al
+6988  58                 pop    ax
+6989  50                 push   ax
+698A  e4 61              in     al,0x61
+698C  0c 03              or     al,0x3
+698E  e6 61              out    0x61,al
+6990  58                 pop    ax
+6991  2e 89 36 93 65     mov    WORD PTR cs:0x6593,si
+6996  2e 80 3e 95 65 00  cmp    BYTE PTR cs:0x6595,0x0
+699C  75 06              jne    0x69a4
+699E  2e c6 06 95 65 01  mov    BYTE PTR cs:0x6595,0x1
+69A4  c3                 ret
+69A5  50                 push   ax
+69A6  2e a0 80 65        mov    al,cs:0x6580
+69AA  fe c0              inc    al
+69AC  24 01              and    al,0x1
+69AE  2e a2 80 65        mov    cs:0x6580,al
+69B2  74 06              je     0x69ba
+69B4  e8 14 fe           call   0x67cb
+69B7  e8 1d ff           call   0x68d7
+69BA  2e 83 3e 8c 65 00  cmp    WORD PTR cs:0x658c,0x0
+69C0  74 1f              je     0x69e1
+69C2  2e a1 98 65        mov    ax,cs:0x6598
+69C6  0b c0              or     ax,ax
+69C8  74 17              je     0x69e1
+69CA  2e 03 06 8e 65     add    ax,WORD PTR cs:0x658e
+69CF  2e a3 8e 65        mov    cs:0x658e,ax
+69D3  50                 push   ax
+69D4  50                 push   ax
+69D5  b0 b6              mov    al,0xb6
+69D7  e6 43              out    0x43,al
+69D9  58                 pop    ax
+69DA  e6 42              out    0x42,al
+69DC  8a c4              mov    al,ah
+69DE  e6 42              out    0x42,al
+69E0  58                 pop    ax
+69E1  58                 pop    ax
+69E2  c3                 ret
+69E3  55                 push   bp
+69E4  8b ec              mov    bp,sp
+69E6  83 ec 02           sub    sp,0x2
+69E9  56                 push   si
+69EA  e8 f3 18           call   0x82e0
+69ED  a2 00 f9           mov    ds:0xf900,al
+69F0  b8 10 04           mov    ax,0x410
+69F3  50                 push   ax
+69F4  2b c0              sub    ax,ax
+69F6  50                 push   ax
+69F7  e8 e3 fa           call   0x64dd
+69FA  83 c4 04           add    sp,0x4
+69FD  8b f0              mov    si,ax
+69FF  89 36 f8 f8        mov    WORD PTR ds:0xf8f8,si
